@@ -1,0 +1,23 @@
+{
+  "name": "alt-styles",
+  "version": "1.0.0",
+  "description": "alternative stylesheet controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aquei/alt-styles.git"
+  },
+  "author": "aquei",
+  "license": "apache license v2",
+  "bugs": {
+    "url": "https://github.com/Aquei/alt-styles/issues"
+  },
+  "homepage": "https://github.com/Aquei/alt-styles",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-uglify": "^1.2.0"
+  }
+}

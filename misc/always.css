@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#only-united:before{
+	content:"下にunited-only.cssからのメッセージが無ければ、only-united.cssは無効になっています。Unitedを選択してみてください";
+	display:block;
+}
+
+#hello:after{
+	content:"always.cssよりご挨拶。こんにちは。";
+	font-size:1.5em;
+	display:block;
+	border-top:1px solid black;
+}

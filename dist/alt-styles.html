@@ -1,0 +1,42 @@
+<!-- 依存 -->
+
+<template>
+<div class="alt-styles">
+	<style>
+		.alt-styles select{
+			background-color:white;
+			border-radius:3px;
+			color:#333;
+			margin:0.4em 1.5em;
+			/* padding:0.4em; */
+			width:calc(100% - 3em);
+
+		}
+
+		.alt-styles select option{
+			padding:1em 0 1em 2em;
+		}
+
+		/* chromeだと上手く動かないようだ
+		user agentがshadow rootを作るため？*/
+		.alt-styles select option:hover:before,.alt-styles select option:focus:before{
+			content:'→ ';
+		}
+
+
+		.alt-styles.dark select{
+			background-color:#333;
+			color:white;
+		}
+
+
+	</style>
+
+	<div class="message">
+		<content></content>
+	</div>
+	<select disabled>
+	</select>
+</div>
+</template>
+<script src="alt-styles.js?v=0.0.1"></script>

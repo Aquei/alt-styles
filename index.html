@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://cdn.jsdelivr.net/webcomponentsjs/latest/webcomponents.min.js"></script>
+
+		<!-- コンポーネントをインポート -->
+		<link href="dist/alt-styles.html" rel="import">
+
+
+		<!-- このスタイルシートは常に読み込まれます -->
+		<link href="misc/always.css?v=1.0.0" rel="stylesheet">
+
+		<!-- 優先スタイルシート  こちらも自動的に読み込まれます-->
+		<link href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.min.css" rel="stylesheet" title="bootstrap">
+		<!-- これは優先スタイルシートですが、title="United"が選択されない限り無効です -->
+		<link href="misc/only-united.css?v=1.0.0" rel="stylesheet" title="United">
+
+		<!-- 代替スタイルシート -->
+		<link href="https://cdn.jsdelivr.net/bootswatch/3/cerulean/bootstrap.min.css" rel="stylesheet alternate" title="Cerulean" data-style="color:#317EAC;background-color:white;">
+		<link href="https://cdn.jsdelivr.net/bootswatch/3/spacelab/bootstrap.min.css" rel="stylesheet alternate" title="Spacelab" data-style="background-color:#FFF;color:#666">
+		<link href="https://cdn.jsdelivr.net/bootswatch/3/cyborg/bootstrap.min.css" rel="stylesheet alternate" title="Cyborg" data-style="background-color:#060606;color:#888;">
+
+		<!-- alt-styles用代替スタイルシート -->
+		<link data-href="https://cdn.jsdelivr.net/bootswatch/3/darkly/bootstrap.min.css" rel="stylesheet alternate" title="Darkly" data-style="background-color:#222;color:#FFF">
+		<link data-href="https://cdn.jsdelivr.net/bootswatch/3/united/bootstrap.min.css" rel="alternate stylesheet" title="United" data-style="background-color:#DD4814;color:#FFF">
+		<link data-href="https://cdn.jsdelivr.net/bootswatch/3/superhero/bootstrap.min.css" rel="alternate stylesheet" title="Superhero" data-style="background-color:#2B3E50;color:#EBEBEB">
+
+		<!-- このスタイルシートも常に読み込まれます -->
+		<link href="https://cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<title>alt-styles 代替スタイルシートを制御するweb component</title>
+	</head>
+	<body>
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">alt-styles</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right hidden">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Alternative Style Sheets!</h1>
+        <p>alt-stylesは使いにくい代替スタイルシートを手軽に操作する為のweb componentです</p>
+		<p>
+			<a class="btn btn-primary btn-lg" href="https://github.com/Aquei/alt-styles/archive/master.zip" role="button"><i class="fa fa-download"></i>　ダウンロード &raquo;</a>
+			<a class="btn btn-info btn-lg" href="https://github.com/Aquei/alt-styles" role="button"><i class="fa fa-github"></i>　レポジトリ &raquo;</a>
+		</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>TRY THIS NOW</h2>
+		  <p><alt-styles data-site="alt-style-page" data-expire="60000">実際に試してみる</alt-styles></p>
+		  <p>このデモページでは<a href="http://getbootstrap.com/">Bootstrap</a>と<a href="http://bootswatch.com/">Bootswatch</a>を自由に切り替えることができます。</p>
+        </div>
+        
+<div class="col-md-4">
+          <h2>MARKUP</h2>
+		  <p>マークアップは通常の代替スタイルシートと同じで構いません。HTTPリクエストを減らす為に<pre><code>&lt;link href=&quot;alt_style.css&quot; rel=&quot;alternate stylesheet&quot; title=&quot;代替スタイルシート&quot;&gt;</code></pre>の代わりに<pre><code>&lt;link data-href=&quot;alt_style.css&quot; rel=&quot;alternate stylesheet&quot; title=&quot;代替スタイルシート&quot;&gt;</code></pre>とすることもできますが、ブラウザメニューからは変更できなくなります。詳しくはこのページのソースを御覧ください。</p>
+          <p><a class="btn btn-default" href="https://github.com/Aquei/alt-styles/blob/master/index.html" role="button">ソースを見る &raquo;</a></p>
+	  </div>
+	  <div class="col-md-4">
+		  <h2>USAGE</h2>
+		  <p>distフォルダにあるalt-styles.htmlをimportします。好きなところに<pre><code>&lt;alt-styles&gt;&lt;/alt-styles&gt;</code></pre>を挿入します。<br>例：
+		  <pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link href=&quot;http://example.com/path/to/file/alt-styles.html&quot; rel=&quot;import&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;alt-styles&gt;&lt;/alt-styles&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		  web componentはChromeしかサポートしていないので、通常はpolyfillである<a href="http://webcomponents.org/polyfills/">webcomponents.js</a>も読み込みます。
+	  </p>
+  </div>
+<div class="col-md-8 col-md-offset-2">
+          <h2>OPTION</h2>
+          <p><div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">data-site</h3>
+  </div>
+  <div class="panel-body">
+	<pre><code>&lt;alt-styles data-site=&quot;your_site_name&quot;&gt;&lt;/alt-styles&gt;</code></pre>
+  このようにdata-site属性にサイトの名前を設定すると、ユーザがスタイルシートを変更した際に<b>自動的に設定を保存</b>します。サイトの他のページに移動しても、自動的に保存した設定を読み込み、そのスタイルシートを適用します。(ブラウザが<a href="https://developer.mozilla.org/ja/docs/DOM/Storage">DOM Storage</a>に対応している必要があります。)。localStorageのkeyはalt-stylesです。
+  <p>
+	  <button type="button" class="btn btn-danger" onclick='location.reload(false)'>試しにリロードしてみる(変更から1分以内にね)</button>
+  </p>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">data-expire</h3>
+  </div>
+  <div class="panel-body">
+	  <pre><code>&lt;alt-styles data-site=&quot;my_website&quot; data-expire=&quot;600000&quot;&gt;&lt;/alt-styles&gt;</code></pre>  このようにdata-expire属性値に時間（単位はミリ秒）を設定すると、設定の自動保存の有効期限を決めることができます。600000だと10分後に設定が無効になります。data-siteが設定されていない場合は意味がありません。<b>デフォルト値(無指定の場合)は10分(600000)</b>になります。<br>上のdemoだと<b>1分</b>に設定してあります。<br>また、&quot;-1&quot;と設定すると期限を定めず、設定が保存されている限り有効です。
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">data-prefix</h3>
+  </div>
+  <div class="panel-body">
+<pre><code>&lt;alt-styles data-site=&quot;my_website&quot; data-expire=&quot;600000&quot; data-prefix=&quot;unique_&quot;&gt;&lt;/alt-styles&gt;</code></pre>
+  このようにdata-prefixを設定すると、localStorageのkeyに接頭辞を付けることができます。既にalt-stylesというkeyを他で利用している場合に利用します。通常は設定しなくてもよいです。同じようなものにdata-suffix属性があり、こちらは接尾辞を設定できます。
+  </div>
+</div>
+
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">data-color</h3>
+  </div>
+  <div class="panel-body">
+	  <pre><code>&lt;alt-styles data-color=&quot;dark&quot;&gt;&lt;/alt-styles&gt;</code></pre>
+  このようにdata-colorに&quot;dark&quot;を設定すると色が黒っぽくなります。chromeで見難くなったのでオススメしません。
+  <alt-styles data-color="dark"></alt-styles>
+  こんな感じ
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">data-style</h3>
+  </div>
+  <div class="panel-body">
+	  <pre><code>&lt;link href=&quot;alt_style.css&quot; rel=&quot;alternate stylesheet&quot; title=&quot;代替スタイルシート&quot; data-style=&quot;background-color:#DD4814;color:#FFF&quot;&gt;</code></pre>
+  このようにlinkタグにdata-styleを設定すると、セレクトメニューのスタイルを変更できます。ゴチャゴチャするのであまりオススメできません。
+  </div>
+</div>
+
+</p>
+	  </div>
+	  <div class="col-md-8 col-md-offset-2">
+
+          <h2>API</h2>
+		  <p>
+			  <h3>via dom</h3>
+			  data-title属性に代替スタイルシートのtitleを設定すると、そのスタイルシートに切り替えます。
+			  <pre><code>document.querySelector(&quot;alt-styles&quot;).setAttribute(&quot;data-title&quot;, &quot;Darkly&quot;);</code></pre>
+			  <button type="button" class="btn btn-info" onclick='document.querySelector("alt-styles").setAttribute("data-title", "Darkly");'>このボタンを押すとDarklyに切りわります</button>
+
+			  <h3>via javascript</h3>
+			  changeStyleメソッドを利用してスタイルシートを切り替えることができます。
+			  <pre><code>document.querySelector(&quot;alt-styles&quot;).changeStyle(&quot;Superhero&quot;);</code></pre>
+			  <button type="button" class="btn btn-info" onclick='document.querySelector("alt-styles").changeStyle("Superhero");'>このボタンを押すとSuperheroに切りわります。</button>
+		  </p>
+	  </div>
+	  <div class="col-md-8 col-md-offset-2">
+		  <h2>Custom Message</h2>
+		  <p>子要素を設定すると好きなメッセージが表示できます。<pre><code>&lt;alt-styles&gt;&lt;p&gt;ここに好きな&lt;b class=&quot;text-primary&quot;&gt;メッセージ&lt;/b&gt;を入れてください&lt;/p&gt;&lt;/alt-styles&gt;</code></pre>
+		  これが下のようになります。
+		  <div class="well">
+			  <alt-styles><p>ここに好きな<b class="text-primary">メッセージ</b>を入れてください</p></alt-styles>
+		  </div>
+	  </div>
+
+
+	  <div class="col-md-4">
+		  <h2>Browser Support</h2>
+		  <p>web componentsなので何もしないで動くのは今現在Google Chromeだけです。polyfillした状態で、Firefox 38で動作しました。恐らくIE9+でも動くと思われます。
+		  </p>
+	  </div>
+
+        <div class="col-md-4">
+          <h2>優先スタイルシート及び通常のスタイルシートの確認</h2>
+		  <p>
+			  <span id="only-united"></span>
+			  <br>
+		 	 <span id="hello"></span>
+	  	</p>
+	</div>
+
+
+
+
+
+
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Aquei</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+		<script src="https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bootstrap/3/js/bootstrap.min.js"></script>
+	</body>
+</html>
+
