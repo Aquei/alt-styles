@@ -44,6 +44,19 @@
 		<!-- このスタイルシートも常に読み込まれます -->
 		<link href="https://cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 		<title>alt-styles 代替スタイルシートを制御するweb component</title>
+		<!-- for old IEs -->
+		<!--[if lt IE 9]>
+			<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+			<link href="https://cdn.jsdelivr.net/respond/1.4.2/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+			<link href="//aquei.github.io/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+			<![endif]-->
+			<style>
+				.adsbygoogle{
+					margin:2em auto;
+				}
+			</style>
+
 	</head>
 	<body>
 
@@ -83,6 +96,7 @@
 			<a class="btn btn-primary btn-lg" href="https://github.com/Aquei/alt-styles/archive/master.zip" role="button"><i class="fa fa-download"></i>　ダウンロード &raquo;</a>
 			<a class="btn btn-info btn-lg" href="https://github.com/Aquei/alt-styles" role="button"><i class="fa fa-github"></i>　レポジトリ &raquo;</a>
 		</p>
+		<p>もしくは...<pre><code>&lt;link href=&quot;//aquei.github.io/alt-styles/dist/alt-styles.html&quot; rel=&quot;import&quot;&gt;</code></pre></p>
       </div>
     </div>
 
@@ -112,6 +126,21 @@
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 		  web componentはChromeしかサポートしていないので、通常はpolyfillである<a href="http://webcomponents.org/polyfills/">webcomponents.js</a>も読み込みます。
+	  </p>
+  </div>
+  <div>
+	  <h4>広告</h4>
+	  <p>
+		  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		  <!-- github pages -->
+		  <ins class="adsbygoogle"
+			  style="display:block"
+			  data-ad-client="ca-pub-6931805962182644"
+			  data-ad-slot="7364765657"
+			  data-ad-format="auto"></ins>
+		  <script>
+			  (adsbygoogle = window.adsbygoogle || []).push({});
+		  </script>
 	  </p>
   </div>
 <div class="col-md-8 col-md-offset-2">
@@ -206,14 +235,30 @@
 		  </p>
 	  </div>
 
-        <div class="col-md-4">
-          <h2>優先スタイルシート及び通常のスタイルシートの確認</h2>
+	  <div class="col-md-4">
+		  <h2>優先スタイルシート及び通常のスタイルシートの確認</h2>
 		  <p>
 			  <span id="only-united"></span>
 			  <br>
-		 	 <span id="hello"></span>
-	  	</p>
-	</div>
+			  <span id="hello"></span>
+		  </p>
+	  </div>
+
+	  <div class="col-md-4">
+		  <h4>広告</h4>
+		  <p>
+			  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			  <!-- github pages -->
+			  <ins class="adsbygoogle"
+				  style="display:block"
+				  data-ad-client="ca-pub-6931805962182644"
+				  data-ad-slot="7364765657"
+				  data-ad-format="auto"></ins>
+			  <script>
+				  (adsbygoogle = window.adsbygoogle || []).push({});
+			  </script>
+		  </p>
+	  </div>
 
 
 
