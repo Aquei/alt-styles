@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+[onclick]:hover:after{
+	content:'onclick=' "'" attr(onclick) "'";
+	display:block;
+	text-transform:none;
+}
+
 #only-united:before{
 	content:"下にunited-only.cssからのメッセージが無ければ、only-united.cssは無効になっています。Unitedを選択してみてください";
 	display:block;
